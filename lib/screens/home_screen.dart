@@ -40,7 +40,6 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            // A mágica da navegação limpa acontece aqui:
             ...AppData.menuOptions.map(
               (option) => CustomMenuButton(
                 title: option,

@@ -64,11 +64,15 @@ class AjudaImediataScreen extends StatelessWidget {
                             'Ajuda Imediata',
                             style: TextStyle(
                               color: AppColors.ajuda,
-                              fontSize: 24,
+                              fontSize: 30,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Divider(),
+                          Divider(
+                            color: AppColors.ajuda,
+                            thickness: 1,
+                            height: 20,
+                          ),
                           SizedBox(height: 30),
                           Text(
                             'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
@@ -92,7 +96,11 @@ class AjudaImediataScreen extends StatelessWidget {
                               },
                             ),
                           ),
-                          Divider(),
+                          Divider(
+                            color: AppColors.ajuda,
+                            thickness: 1,
+                            height: 20,
+                          ),
                           Text(
                             'Para orientação, denúncia anônima e acolhimento:',
                             style: TextStyle(fontSize: 16),

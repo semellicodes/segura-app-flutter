@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:segura_app/screens/home_screen.dart';
 
 void main() {
-  runApp(const MyWidget());
+  runApp(const SeguraApp());
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class SeguraApp extends StatelessWidget {
+  const SeguraApp({super.key});
 
   @override
   Widget build(BuildContext context) {

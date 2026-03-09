@@ -27,7 +27,27 @@ class AjudaImediataScreen extends StatelessWidget {
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, top: 10),
+                  child: TextButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.arrow_back_ios, size: 18),
+                    label: const Text(
+                      'Voltar',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      foregroundColor: const Color.fromARGB(255, 44, 3, 140),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
@@ -43,7 +63,7 @@ class AjudaImediataScreen extends StatelessWidget {
                           Text(
                             'Ajuda Imediata',
                             style: TextStyle(
-                              color: const Color.fromARGB(255, 44, 3, 140),
+                              color: AppColors.ajuda,
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
                             ),
@@ -57,14 +77,14 @@ class AjudaImediataScreen extends StatelessWidget {
                           SizedBox(height: 30),
                           CustomMenuButton(
                             title: 'LIGUE 190 (POLÍCIA MILITAR)',
-                            color: const Color.fromARGB(255, 167, 24, 17),
+                            color: AppColors.alertaVermelho,
                             onPressed: () {
                               _fazerLigacao('190');
                             },
                           ),
                           CustomMenuButton(
                             title: 'LIGUE 197 (POLÍCIA CIVIL)',
-                            color: const Color.fromARGB(255, 167, 24, 17),
+                            color: AppColors.alertaVermelho,
                             onPressed: () {
                               _fazerLigacao('197');
                             },
@@ -76,9 +96,8 @@ class AjudaImediataScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 15),
                           CustomMenuButton(
-                            title:
-                                'LIGUE 180 (CENTRAL DE ATENDIMENTO À MULHER)',
-                            color: const Color.fromARGB(255, 44, 3, 140),
+                            title: 'LIGUE 180 (CENTRAL MULHER)',
+                            color: AppColors.ajuda,
                             onPressed: () {
                               _fazerLigacao('180');
                             },

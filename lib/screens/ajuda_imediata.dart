@@ -74,33 +74,37 @@ class AjudaImediataScreen extends StatelessWidget {
                             'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
                             style: TextStyle(fontSize: 16),
                           ),
-                          SizedBox(height: 30),
-                          CustomMenuButton(
-                            title: 'LIGUE 190 (POLÍCIA MILITAR)',
-                            color: AppColors.alertaVermelho,
-                            onPressed: () {
-                              _fazerLigacao('190');
-                            },
+                          Center(
+                            child: CustomMenuButton(
+                              title: 'LIGUE 190 (POLÍCIA MILITAR)',
+                              color: AppColors.alertaVermelho,
+                              onPressed: () {
+                                _fazerLigacao('190');
+                              },
+                            ),
                           ),
-                          CustomMenuButton(
-                            title: 'LIGUE 197 (POLÍCIA CIVIL)',
-                            color: AppColors.alertaVermelho,
-                            onPressed: () {
-                              _fazerLigacao('197');
-                            },
+                          Center(
+                            child: CustomMenuButton(
+                              title: 'LIGUE 197 (POLÍCIA CIVIL)',
+                              color: AppColors.alertaVermelho,
+                              onPressed: () {
+                                _fazerLigacao('197');
+                              },
+                            ),
                           ),
                           Divider(),
                           Text(
                             'Para orientação, denúncia anônima e acolhimento:',
                             style: TextStyle(fontSize: 16),
                           ),
-                          SizedBox(height: 15),
-                          CustomMenuButton(
-                            title: 'LIGUE 180 (CENTRAL MULHER)',
-                            color: AppColors.ajuda,
-                            onPressed: () {
-                              _fazerLigacao('180');
-                            },
+                          Center(
+                            child: CustomMenuButton(
+                              title: 'LIGUE 180 (CENTRAL MULHER)',
+                              color: AppColors.ajuda,
+                              onPressed: () {
+                                _fazerLigacao('180');
+                              },
+                            ),
                           ),
                         ],
                       ),

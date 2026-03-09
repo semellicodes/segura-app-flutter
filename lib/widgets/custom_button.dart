@@ -16,10 +16,10 @@ class CustomMenuButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color.fromARGB(255, 255, 124, 101),
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+          backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+          foregroundColor: const Color.fromARGB(255, 251, 251, 251),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          minimumSize: const Size(300, 50),
         ),
         onPressed: onPressed,
         child: Text(title),

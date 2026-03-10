@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/screens/ajuda_imediata.dart';
 import 'package:segura_app/screens/apoio.dart';
+import 'package:segura_app/screens/leis.dart';
 import 'package:segura_app/screens/map.dart';
 
 class AppData {
@@ -16,7 +17,7 @@ class AppData {
     "AJUDA IMEDIATA": const AjudaImediataScreen(),
     "MAPA DE SEGURANÇA": const MapScreen(),
     "ONDE BUSCAR APOIO": const ApoioScreen(),
-    "LEIS E SINAIS": const Scaffold(body: Center(child: Text("Em breve"))),
+    "LEIS E SINAIS": const LeisScreen(),
     "SOBRE O APP": const Scaffold(body: Center(child: Text("Em breve"))),
   };
   static const String centralmulher = "180";

@@ -16,117 +16,103 @@ class AjudaImediataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [AppColors.background, AppColors.background],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, top: 10),
-                  child: TextButton.icon(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.arrow_back_ios, size: 18),
-                    label: const Text(
-                      'Voltar',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                      foregroundColor: const Color.fromARGB(255, 44, 3, 140),
-                    ),
+      backgroundColor: AppColors.ajuda,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10, top: 10),
+                child: TextButton.icon(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.arrow_back_ios, size: 18),
+                  label: const Text(
+                    'Voltar',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  style: TextButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    elevation: 4,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 30,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Ajuda Imediata',
-                            style: TextStyle(
-                              color: AppColors.ajuda,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Divider(
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Card(
+                  elevation: 4,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Ajuda Imediata',
+                          style: TextStyle(
                             color: AppColors.ajuda,
-                            thickness: 1,
-                            height: 20,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
                           ),
-                          SizedBox(height: 30),
-                          Text(
-                            'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
-                            style: TextStyle(
-                              color: const Color.fromARGB(255, 0, 0, 0),
-                              fontSize: 16,
-                            ),
-                          ),
-                          Center(
-                            child: CustomMenuButton(
-                              title: 'LIGUE 190 (POLÍCIA MILITAR)',
-                              color: AppColors.alertaVermelho,
-                              onPressed: () {
-                                _fazerLigacao('190');
-                              },
-                            ),
-                          ),
-                          Center(
-                            child: CustomMenuButton(
-                              title: 'LIGUE 197 (POLÍCIA CIVIL)',
-                              color: AppColors.alertaVermelho,
-                              onPressed: () {
-                                _fazerLigacao('197');
-                              },
-                            ),
-                          ),
-                          Divider(
+                        ),
+                        Divider(
+                          color: const Color.fromARGB(255, 251, 202, 254),
+                          thickness: 1,
+                          height: 20,
+                        ),
+                        SizedBox(height: 30),
+                        Text(
+                          'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
+                          style: TextStyle(
                             color: const Color.fromARGB(255, 0, 0, 0),
-                            thickness: 1,
-                            height: 20,
+                            fontSize: 16,
                           ),
-                          Text(
-                            'Para orientação, denúncia anônima e acolhimento:',
-                            style: TextStyle(
-                              color: AppColors.ajuda,
-                              fontSize: 16,
-                            ),
+                        ),
+                        Center(
+                          child: CustomMenuButton(
+                            title: 'LIGUE 190 (POLÍCIA MILITAR)',
+                            color: AppColors.alertaVermelho,
+                            onPressed: () {
+                              _fazerLigacao('190');
+                            },
                           ),
-                          Center(
-                            child: CustomMenuButton(
-                              title: 'LIGUE 180 (CENTRAL MULHER)',
-                              color: AppColors.ajuda,
-                              onPressed: () {
-                                _fazerLigacao('180');
-                              },
-                            ),
+                        ),
+                        Center(
+                          child: CustomMenuButton(
+                            title: 'LIGUE 197 (POLÍCIA CIVIL)',
+                            color: AppColors.alertaVermelho,
+                            onPressed: () {
+                              _fazerLigacao('197');
+                            },
                           ),
-                        ],
-                      ),
+                        ),
+                        Divider(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          thickness: 1,
+                          height: 20,
+                        ),
+                        Text(
+                          'Para orientação, denúncia anônima e acolhimento:',
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            fontSize: 16,
+                          ),
+                        ),
+                        Center(
+                          child: CustomMenuButton(
+                            title: 'LIGUE 180 (CENTRAL MULHER)',
+                            color: AppColors.ajuda,
+                            onPressed: () {
+                              _fazerLigacao('180');
+                            },
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

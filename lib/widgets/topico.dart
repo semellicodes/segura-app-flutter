@@ -12,10 +12,7 @@ class Topico extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 12.0),
       child: Text.rich(
         TextSpan(
-          style: const TextStyle(
-            fontSize: 16,
-            color: Colors.black87,
-          ), // Estilo geral
+          style: const TextStyle(fontSize: 16, color: Colors.black87),
           children: [
             TextSpan(
               text: '• $titulo ',

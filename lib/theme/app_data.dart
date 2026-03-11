@@ -23,4 +23,26 @@ class AppData {
   static const String centralmulher = "180";
   static const String policeNumber1 = "190";
   static const String policeNumber2 = "197";
+
+  static const Map<String, String> tiposDeViolencia = {
+    "Violência Física": "Agressão física, como empurrões, socos, chutes.",
+    "Violência Psicológica":
+        "Ameaças, humilhações, isolamento social. Fazer você duvidar da própria sanidade. (Gaslighting)",
+    "Violência Sexual":
+        "Assédio, estupro, abuso sexual ou impedir uso de anticoncepcional.",
+    "Violência Patrimonial": "Controle financeiro, destruição de bens.",
+    "Violência Moral": "Difamação, calúnia ou injúria.",
+  };
+
+  static const Map<String, String> locaisDeApoio = {
+    "DEAM (Delegacia da Mulher)":
+        "Atendimento especializado para mulheres vítimas de violência.",
+    "Centro de Referência de Atendimento à Mulher (CRAM)":
+        "Oferece apoio psicológico, social e jurídico.",
+    "Casa Abrigo": "Refúgio temporário para mulheres em situação de risco.",
+    "Defensoria Pública":
+        "Assistência jurídica gratuita para vítimas de violência.",
+    "Organizações Não Governamentais (ONGs)":
+        "Diversas ONGs oferecem apoio e serviços especializados.",
+  };
 }

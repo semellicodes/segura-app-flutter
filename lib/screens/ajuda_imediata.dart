@@ -76,7 +76,10 @@ class AjudaImediataScreen extends StatelessWidget {
                           SizedBox(height: 30),
                           Text(
                             'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(
+                              color: const Color.fromARGB(255, 0, 0, 0),
+                              fontSize: 16,
+                            ),
                           ),
                           Center(
                             child: CustomMenuButton(
@@ -97,13 +100,16 @@ class AjudaImediataScreen extends StatelessWidget {
                             ),
                           ),
                           Divider(
-                            color: AppColors.ajuda,
+                            color: const Color.fromARGB(255, 0, 0, 0),
                             thickness: 1,
                             height: 20,
                           ),
                           Text(
                             'Para orientação, denúncia anônima e acolhimento:',
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(
+                              color: AppColors.ajuda,
+                              fontSize: 16,
+                            ),
                           ),
                           Center(
                             child: CustomMenuButton(

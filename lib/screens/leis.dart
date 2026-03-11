@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
+import 'package:segura_app/theme/app_data.dart';
+import 'package:segura_app/widgets/topico.dart';
 
 class LeisScreen extends StatelessWidget {
   const LeisScreen({super.key});
@@ -47,11 +49,32 @@ class LeisScreen extends StatelessWidget {
                           ),
                         ),
                         Divider(
-                          color: AppColors.ajuda,
+                          color: Colors.grey[300],
                           thickness: 1,
                           height: 20,
                         ),
-                        SizedBox(height: 30),
+                        Text(
+                          "Lei Maria da Penha (11.340/2006)",
+                          style: TextStyle(
+                            color: AppColors.ajuda,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "Ele não serve só para agressão física. A lei reconhece 5 tipos de violência doméstica",
+                          style: TextStyle(color: Colors.black, fontSize: 14),
+                          textAlign: TextAlign.justify,
+                        ),
+                        SizedBox(height: 15),
+
+                        ...AppData.tiposDeViolencia.entries.map((item) {
+                          return Topico(
+                            titulo: item.key,
+                            descricao: item.value,
+                          );
+                        }),
                       ],
                     ),
                   ),

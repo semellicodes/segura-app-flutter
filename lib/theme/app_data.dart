@@ -45,4 +45,12 @@ class AppData {
     "Organizações Não Governamentais (ONGs)":
         "Diversas ONGs oferecem apoio e serviços especializados.",
   };
+
+  static const Map<String, String> sinaisDeViolencia = {
+    "Isolamento Social": "Afastamento de amigos e familiares.",
+    "Mudanças de Comportamento": "Medo, ansiedade ou depressão.",
+    "Lesões Físicas": "Ferimentos frequentes ou inexplicáveis.",
+    "Controle Financeiro": "Dificuldade em acessar dinheiro ou recursos.",
+    "Comportamento Controlador": "Parceiro controlando atividades e contatos.",
+  };
 }

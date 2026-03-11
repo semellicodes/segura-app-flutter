@@ -18,6 +18,7 @@ class Topico extends StatelessWidget {
               text: '• $titulo ',
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
+
             TextSpan(text: descricao),
           ],
         ),

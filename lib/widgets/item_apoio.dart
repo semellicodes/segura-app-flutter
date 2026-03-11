@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:segura_app/theme/app_colors.dart';
 
 class ItemApoio extends StatelessWidget {
   final String titulo;
@@ -20,7 +19,6 @@ class ItemApoio extends StatelessWidget {
 
         Text(descricao, style: const TextStyle(fontSize: 16)),
         const SizedBox(height: 10),
-        Divider(color: AppColors.ajuda, thickness: 1, height: 20),
       ],
     );
   }

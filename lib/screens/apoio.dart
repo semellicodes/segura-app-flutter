@@ -59,7 +59,6 @@ class ApoioScreen extends StatelessWidget {
                             descricao: item.value,
                           );
                         }),
-
                         SizedBox(height: 20),
                       ],
                     ),

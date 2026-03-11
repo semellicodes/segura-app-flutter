@@ -49,7 +49,7 @@ class ApoioScreen extends StatelessWidget {
                           ),
                         ),
                         Divider(
-                          color: const Color.fromARGB(255, 243, 208, 249),
+                          color: Colors.grey[300],
                           thickness: 1,
                           height: 20,
                         ),

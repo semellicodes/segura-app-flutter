@@ -56,9 +56,9 @@ class AjudaImediataScreen extends StatelessWidget {
                           ),
                         ),
                         Divider(
-                          color: const Color.fromARGB(255, 251, 202, 254),
+                          height: 15,
                           thickness: 1,
-                          height: 20,
+                          color: Colors.grey[300],
                         ),
                         SizedBox(height: 30),
                         Text(
@@ -87,9 +87,9 @@ class AjudaImediataScreen extends StatelessWidget {
                           ),
                         ),
                         Divider(
-                          color: const Color.fromARGB(255, 0, 0, 0),
+                          height: 15,
                           thickness: 1,
-                          height: 20,
+                          color: Colors.grey[300],
                         ),
                         Text(
                           'Para orientação, denúncia anônima e acolhimento:',

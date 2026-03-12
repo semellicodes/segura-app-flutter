@@ -3,6 +3,7 @@ import 'package:segura_app/screens/ajuda_imediata.dart';
 import 'package:segura_app/screens/apoio.dart';
 import 'package:segura_app/screens/leis.dart';
 import 'package:segura_app/screens/map.dart';
+import 'package:segura_app/screens/sobre_app.dart';
 
 class AppData {
   static const List<String> menuOptions = [
@@ -18,7 +19,7 @@ class AppData {
     "MAPA DE SEGURANÇA": const MapScreen(),
     "ONDE BUSCAR APOIO": const ApoioScreen(),
     "LEIS E SINAIS": const LeisScreen(),
-    "SOBRE O APP": const Scaffold(body: Center(child: Text("Em breve"))),
+    "SOBRE O APP": const SobreApp(),
   };
   static const String centralmulher = "180";
   static const String policeNumber1 = "190";
@@ -52,5 +53,14 @@ class AppData {
     "Lesões Físicas": "Ferimentos frequentes ou inexplicáveis.",
     "Controle Financeiro": "Dificuldade em acessar dinheiro ou recursos.",
     "Comportamento Controlador": "Parceiro controlando atividades e contatos.",
+  };
+
+  static const Map<String, String> sobreApp = {
+    "Não Usamos cookies de rastreamento":
+        "O Segura não coleta dados pessoais ou rastreia o comportamento dos usuários. Nosso foco é fornecer informações e recursos de forma segura e privada.",
+    "Nenhum dado é salvo ou compartilhado":
+        "Não armazenamos informações pessoais dos usuários. Todas as interações com o app são anônimas e não vinculadas a identidades específicas.",
+    "Funciona totalmente offline":
+        "O Segura foi projetado para funcionar sem conexão à internet, garantindo acesso a informações e recursos mesmo em situações de emergência onde a conectividade pode ser limitada.",
   };
 }

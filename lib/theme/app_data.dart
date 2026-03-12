@@ -56,11 +56,11 @@ class AppData {
   };
 
   static const Map<String, String> sobreApp = {
-    "Não Usamos cookies de rastreamento":
+    "Não usamos cookies de rastreamento:":
         "O Segura não coleta dados pessoais ou rastreia o comportamento dos usuários. Nosso foco é fornecer informações e recursos de forma segura e privada.",
-    "Nenhum dado é salvo ou compartilhado":
+    "Nenhum dado é salvo ou compartilhado:":
         "Não armazenamos informações pessoais dos usuários. Todas as interações com o app são anônimas e não vinculadas a identidades específicas.",
-    "Funciona totalmente offline":
+    "Funciona totalmente offline:":
         "O Segura foi projetado para funcionar sem conexão à internet, garantindo acesso a informações e recursos mesmo em situações de emergência onde a conectividade pode ser limitada.",
   };
 }

@@ -53,13 +53,24 @@ class SobreApp extends StatelessWidget {
                           thickness: 1,
                           height: 20,
                         ),
+                        Text(
+                          "Nosso objetivo é oferecer um ambiente seguro e acessível, onde as vítimas possam encontrar apoio, conhecer seus direitos e acessar serviços de ajuda de forma rápida e eficiente.",
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            fontSize: 16,
+                          ),
+                        ),
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
+                        ),
                         ...AppData.sobreApp.entries.map((entry) {
                           return ItemSobreapp(
                             titulo: entry.key,
                             descricao: entry.value,
                           );
                         }),
-                        SizedBox(height: 20),
                       ],
                     ),
                   ),

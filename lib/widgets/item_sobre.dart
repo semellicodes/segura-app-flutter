@@ -19,7 +19,7 @@ class ItemSobreapp extends StatelessWidget {
           style: const TextStyle(fontSize: 16, color: Colors.black87),
           children: [
             TextSpan(
-              text: '• $titulo ',
+              text: '$titulo ',
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
 

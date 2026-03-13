@@ -8,7 +8,6 @@ class SobreApp extends StatelessWidget {
   const SobreApp({super.key});
   Future<void> _abrirLink() async {
     final Uri url = Uri.parse('https://github.com/semellicodes');
-
     if (await canLaunchUrl(url)) {
       await launchUrl(url, mode: LaunchMode.externalApplication);
     }
@@ -34,9 +33,7 @@ class SobreApp extends StatelessWidget {
                     'Voltar',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  style: TextButton.styleFrom(
-                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  ),
+                  style: TextButton.styleFrom(foregroundColor: Colors.white),
                 ),
               ),
               Padding(

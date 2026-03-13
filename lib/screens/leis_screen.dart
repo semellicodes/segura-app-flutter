@@ -33,7 +33,7 @@ class LeisScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(8.0),
                 child: Card(
                   elevation: 4,
                   child: Padding(
@@ -60,6 +60,11 @@ class LeisScreen extends StatelessWidget {
                           descricao: AppData
                               .leis["Lei Maria da Penha (11.340/2006):"]!,
                         ),
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 15,
+                        ),
                         Text(
                           "Ela não serve só para agressão física. A lei reconhece 5 tipos de violência doméstica:",
                           style: TextStyle(
@@ -75,6 +80,11 @@ class LeisScreen extends StatelessWidget {
                             descricao: item.value,
                           );
                         }),
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
+                        ),
                         Leis(
                           titulo: "Lei do Feminicídio (13.104/2015):",
                           descricao: AppData
@@ -83,7 +93,7 @@ class LeisScreen extends StatelessWidget {
                         Divider(
                           color: Colors.grey[300],
                           thickness: 1,
-                          height: 20,
+                          height: 15,
                         ),
                         Text(
                           "Sinais de Alerta",
@@ -120,7 +130,7 @@ class LeisScreen extends StatelessWidget {
                           height: 20,
                         ),
                         Text(
-                          "Promessas não susbtituem atitudes. A responsabilidade pela violência é do agressor.",
+                          "Promessas não substituem atitudes. A responsabilidade pela violência é do agressor.",
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black87,

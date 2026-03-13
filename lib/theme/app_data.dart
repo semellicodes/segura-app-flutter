@@ -43,7 +43,7 @@ class AppData {
     "Casa Abrigo": "Refúgio temporário para mulheres em situação de risco.",
     "Defensoria Pública":
         "Assistência jurídica gratuita para vítimas de violência.",
-    "Organizações Não Governamentais (ONGs)":
+    "Organizações não Governamentais (ONGs)":
         "Diversas ONGs oferecem apoio e serviços especializados.",
   };
 

@@ -70,7 +70,7 @@ class AppData {
     "Ato de Violência:":
         "Acontece a agressão de fato (física, verbal ou quebra de objetos). É aqui que muitas mulheres sentem medo e buscam ajuda.",
     "Lua de Mel:":
-        "O agresso pede desculpas, chora, diz que perdeu a cabeça e promete mudar. Ele fica carinhoso. Cuidado! Essa fase pode durar dias ou meses, mas o ciclo tende a se repetir, e a violência pode piorar a cada vez.",
+        "O agressor pede desculpas, chora, diz que perdeu a cabeça e promete mudar. Ele fica carinhoso. Cuidado! Essa fase pode durar dias ou meses, mas o ciclo tende a se repetir, e a violência pode piorar a cada vez.",
   };
 
   static const Map<String, String> leis = {

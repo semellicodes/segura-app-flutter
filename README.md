@@ -39,5 +39,5 @@ _(Nota: Como o app ainda não está na Play Store, o seu celular pode pedir perm
 
 1. Clone este repositório:
    ```bash
-   git clone (https://github.com/semellicodes/segura_app.git)
+   git clone (https://github.com/semellicodes/segura-app-flutter)
    ```

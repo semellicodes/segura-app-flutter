@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
+import 'package:segura_app/theme/app_data.dart';
 import 'package:segura_app/widgets/custom_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,9 +34,7 @@ class AjudaImediataScreen extends StatelessWidget {
                     'Voltar',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  style: TextButton.styleFrom(
-                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  ),
+                  style: TextButton.styleFrom(foregroundColor: Colors.white),
                 ),
               ),
               Padding(
@@ -63,17 +62,14 @@ class AjudaImediataScreen extends StatelessWidget {
                         SizedBox(height: 30),
                         Text(
                           'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 0, 0, 0),
-                            fontSize: 16,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         Center(
                           child: CustomMenuButton(
                             title: 'LIGUE 190 (POLÍCIA MILITAR)',
                             color: AppColors.alertaVermelho,
                             onPressed: () {
-                              _fazerLigacao('190');
+                              _fazerLigacao(AppData.policeNumber1);
                             },
                           ),
                         ),
@@ -82,7 +78,7 @@ class AjudaImediataScreen extends StatelessWidget {
                             title: 'LIGUE 197 (POLÍCIA CIVIL)',
                             color: AppColors.alertaVermelho,
                             onPressed: () {
-                              _fazerLigacao('197');
+                              _fazerLigacao(AppData.policeNumber2);
                             },
                           ),
                         ),
@@ -93,17 +89,14 @@ class AjudaImediataScreen extends StatelessWidget {
                         ),
                         Text(
                           'Para orientação, denúncia anônima e acolhimento:',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 0, 0, 0),
-                            fontSize: 16,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         Center(
                           child: CustomMenuButton(
                             title: 'LIGUE 180 (CENTRAL MULHER)',
                             color: AppColors.ajuda,
                             onPressed: () {
-                              _fazerLigacao('180');
+                              _fazerLigacao(AppData.centralmulher);
                             },
                           ),
                         ),

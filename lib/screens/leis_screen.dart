@@ -93,6 +93,11 @@ class LeisScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
+                        ),
                         Text(
                           "A violencia evolui. Identifique em que fase você está:",
                           style: TextStyle(

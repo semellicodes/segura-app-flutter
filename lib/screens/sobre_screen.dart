@@ -2,9 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/theme/app_data.dart';
 import 'package:segura_app/widgets/item_sobre.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SobreApp extends StatelessWidget {
   const SobreApp({super.key});
+  Future<void> _abrirLink() async {
+    final Uri url = Uri.parse('https://github.com/semellicodes');
+
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +79,25 @@ class SobreApp extends StatelessWidget {
                             descricao: entry.value,
                           );
                         }),
+
+                        SizedBox(height: 30),
+
+                        Center(
+                          child: GestureDetector(
+                            onTap: () {
+                              _abrirLink();
+                            },
+                            child: Text(
+                              "@semellicodes",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
                       ],
                     ),
                   ),

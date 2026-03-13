@@ -80,7 +80,7 @@ class SobreApp extends StatelessWidget {
                           );
                         }),
 
-                        SizedBox(height: 30),
+                        SizedBox(height: 15),
 
                         Center(
                           child: GestureDetector(
@@ -97,7 +97,6 @@ class SobreApp extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
                       ],
                     ),
                   ),

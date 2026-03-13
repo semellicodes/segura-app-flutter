@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:segura_app/screens/ajuda_imediata.dart';
-import 'package:segura_app/screens/apoio.dart';
-import 'package:segura_app/screens/leis.dart';
-import 'package:segura_app/screens/map.dart';
-import 'package:segura_app/screens/sobre_app.dart';
+import 'package:segura_app/screens/ajuda_screen.dart';
+import 'package:segura_app/screens/apoio_screen.dart';
+import 'package:segura_app/screens/leis_screen.dart';
+import 'package:segura_app/screens/map_screen.dart';
+import 'package:segura_app/screens/sobreApp_scree%20.dart';
 
 class AppData {
   static const List<String> menuOptions = [
@@ -26,13 +26,13 @@ class AppData {
   static const String policeNumber2 = "197";
 
   static const Map<String, String> tiposDeViolencia = {
-    "Violência Física": "Agressão física, como empurrões, socos, chutes.",
-    "Violência Psicológica":
+    "Violência Física:": "Agressão física, como empurrões, socos, chutes.",
+    "Violência Psicológica:":
         "Ameaças, humilhações, isolamento social. Fazer você duvidar da própria sanidade. (Gaslighting)",
-    "Violência Sexual":
+    "Violência Sexual:":
         "Assédio, estupro, abuso sexual ou impedir uso de anticoncepcional.",
-    "Violência Patrimonial": "Controle financeiro, destruição de bens.",
-    "Violência Moral": "Difamação, calúnia ou injúria.",
+    "Violência Patrimonial:": "Controle financeiro, destruição de bens.",
+    "Violência Moral:": "Difamação, calúnia ou injúria.",
   };
 
   static const Map<String, String> locaisDeApoio = {
@@ -62,5 +62,21 @@ class AppData {
         "Não armazenamos informações pessoais dos usuários. Todas as interações com o app são anônimas e não vinculadas a identidades específicas.",
     "Funciona totalmente offline:":
         "O Segura foi projetado para funcionar sem conexão à internet, garantindo acesso a informações e recursos mesmo em situações de emergência onde a conectividade pode ser limitada.",
+  };
+
+  static const Map<String, String> sinaisAlerta = {
+    "Aumento da Tensão:":
+        "O agressor fica irritado por coisas pequenas. Você sente que está pisando em ovos para não desagradá-lo. Começam os gritos e o ciúme excessivo.",
+    "Ato de Violência:":
+        "Acontece a agressão de fato (física, verbal ou quebra de objetos). É aqui que muitas mulheres sentem medo e buscam ajuda.",
+    "Lua de Mel:":
+        "O agresso pede desculpas, chora, diz que perdeu a cabeça e promete mudar. Ele fica carinhoso. Cuidado! Essa fase pode durar dias ou meses, mas o ciclo tende a se repetir, e a violência pode piorar a cada vez.",
+  };
+
+  static const Map<String, String> leis = {
+    "Lei Maria da Penha (11.340/2006)":
+        "Cria mecanismos para coibir a violência doméstica e familiar contra a mulher.",
+    "Lei do Feminicídio (13.104/2015)":
+        "Qualifica o homicídio de mulheres por razões de gênero como crime hediondo.",
   };
 }

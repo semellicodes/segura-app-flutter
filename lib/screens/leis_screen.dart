@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/theme/app_data.dart';
-import 'package:segura_app/widgets/topico.dart';
+import 'package:segura_app/widgets/item_topico.dart';
 
 class LeisScreen extends StatelessWidget {
   const LeisScreen({super.key});
@@ -53,23 +53,31 @@ class LeisScreen extends StatelessWidget {
                           thickness: 1,
                           height: 20,
                         ),
-                        Text(
-                          "Lei Maria da Penha (11.340/2006)",
-                          style: TextStyle(
-                            color: AppColors.ajuda,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Ele não serve só para agressão física. A lei reconhece 5 tipos de violência doméstica",
-                          style: TextStyle(color: Colors.black, fontSize: 14),
-                          textAlign: TextAlign.justify,
-                        ),
+
                         SizedBox(height: 15),
 
                         ...AppData.tiposDeViolencia.entries.map((item) {
+                          return Topico(
+                            titulo: item.key,
+                            descricao: item.value,
+                          );
+                        }),
+
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
+                        ),
+                        Text(
+                          "Sinais de Alerta",
+                          style: TextStyle(
+                            color: AppColors.ajuda,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 15),
+                        ...AppData.sinaisAlerta.entries.map((item) {
                           return Topico(
                             titulo: item.key,
                             descricao: item.value,

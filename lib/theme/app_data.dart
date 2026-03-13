@@ -56,12 +56,12 @@ class AppData {
   };
 
   static const Map<String, String> sobreApp = {
-    "Não usamos cookies de rastreamento:":
-        "O Segura não coleta dados pessoais ou rastreia o comportamento dos usuários. Nosso foco é fornecer informações e recursos de forma segura e privada.",
-    "Nenhum dado é salvo:":
-        "O Segura não coleta dados pessoais ou rastreia o comportamento dos usuários. Nosso foco é fornecer informações e recursos de forma segura e privada.",
-    "Funciona totalmente offline:":
-        "O Segura foi projetado para funcionar sem conexão à internet, garantindo acesso a informações e recursos mesmo em situações de emergência onde a conectividade pode ser limitada.",
+    "Privacidade em primeiro lugar:":
+        "O Segura não coleta dados pessoais, não exige cadastro e não rastreia o seu comportamento. Nosso foco é fornecer apoio de forma totalmente segura e anônima.",
+    "Sua localização não é salva:":
+        "Acessamos o GPS do seu celular apenas no momento em que você abre o mapa para mostrar locais de apoio próximos. Nenhuma coordenada é guardada, enviada ou compartilhada.",
+    "Funcionamento híbrido:":
+        "Todos os textos, cartilhas e contatos de emergência do Segura funcionam offline para garantir seu acesso em momentos críticos. Apenas o carregamento visual do mapa exige conexão com a internet.",
   };
 
   static const Map<String, String> sinaisAlerta = {

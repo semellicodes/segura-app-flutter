@@ -27,6 +27,14 @@ Um aplicativo focado em oferecer um ambiente seguro e acessível, onde mulheres 
   - `flutter_map` e `latlong2`: Renderização de mapas interativos de código aberto.
   - `geolocator`: Comunicação nativa com o hardware do aparelho para acessar o GPS, respeitando as permissões de privacidade do sistema operacional.
 
+## Teste o Aplicativo (Versão Demo)
+
+Quer ver como o **Segura** funciona na prática? Baixe a versão de teste para Android:
+
+**[Clique aqui para baixar o APK](https://github.com/semellicodes/segura-app-flutter/releases)**
+
+_(Nota: Como o app ainda não está na Play Store, o seu celular pode pedir permissão para instalar aplicativos de fontes desconhecidas. É só aceitar e testar!)_
+
 ## Como rodar o projeto
 
 1. Clone este repositório:

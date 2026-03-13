@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/theme/app_data.dart';
+import 'package:segura_app/widgets/item_leis.dart';
 import 'package:segura_app/widgets/item_topico.dart';
 
 class LeisScreen extends StatelessWidget {
@@ -48,21 +49,37 @@ class LeisScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+
                         Divider(
                           color: Colors.grey[300],
                           thickness: 1,
                           height: 20,
                         ),
-
+                        Leis(
+                          titulo: "Lei Maria da Penha (11.340/2006):",
+                          descricao: AppData
+                              .leis["Lei Maria da Penha (11.340/2006):"]!,
+                        ),
+                        Text(
+                          "Ela não serve só para agressão física. A lei reconhece 5 tipos de violência doméstica:",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         SizedBox(height: 15),
-
                         ...AppData.tiposDeViolencia.entries.map((item) {
                           return Topico(
                             titulo: item.key,
                             descricao: item.value,
                           );
                         }),
-
+                        Leis(
+                          titulo: "Lei do Feminicídio (13.104/2015):",
+                          descricao: AppData
+                              .leis["Lei do Feminicídio (13.104/2015):"]!,
+                        ),
                         Divider(
                           color: Colors.grey[300],
                           thickness: 1,
@@ -76,6 +93,15 @@ class LeisScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Text(
+                          "A violencia evolui. Identifique em que fase você está:",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
                         SizedBox(height: 15),
                         ...AppData.sinaisAlerta.entries.map((item) {
                           return Topico(
@@ -83,6 +109,19 @@ class LeisScreen extends StatelessWidget {
                             descricao: item.value,
                           );
                         }),
+                        Divider(
+                          color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
+                        ),
+                        Text(
+                          "Promessas não susbtituem atitudes. A responsabilidade pela violência é do agressor.",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ),

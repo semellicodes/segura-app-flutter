@@ -3,7 +3,7 @@ import 'package:segura_app/screens/ajuda_screen.dart';
 import 'package:segura_app/screens/apoio_screen.dart';
 import 'package:segura_app/screens/leis_screen.dart';
 import 'package:segura_app/screens/map_screen.dart';
-import 'package:segura_app/screens/sobreApp_scree%20.dart';
+import 'package:segura_app/screens/sobre_screen.dart';
 
 class AppData {
   static const List<String> menuOptions = [
@@ -74,9 +74,9 @@ class AppData {
   };
 
   static const Map<String, String> leis = {
-    "Lei Maria da Penha (11.340/2006)":
+    "Lei Maria da Penha (11.340/2006):":
         "Cria mecanismos para coibir a violência doméstica e familiar contra a mulher.",
-    "Lei do Feminicídio (13.104/2015)":
+    "Lei do Feminicídio (13.104/2015):":
         "Qualifica o homicídio de mulheres por razões de gênero como crime hediondo.",
   };
 }

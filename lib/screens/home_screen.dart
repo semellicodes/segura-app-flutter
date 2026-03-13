@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [AppColors.secondary, AppColors.primary],
@@ -20,18 +21,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
-                IconButton(
-                  icon: const Icon(Icons.account_circle),
-                  onPressed: () {},
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
+            SizedBox(height: 60),
             Text(
               AppData.appName,
               style: const TextStyle(

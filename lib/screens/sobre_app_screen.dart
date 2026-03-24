@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/theme/app_data.dart';
-import 'package:segura_app/widgets/custom_button.dart';
+import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/widgets/card_sobre_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AjudaImediataScreen extends StatelessWidget {
-  const AjudaImediataScreen({super.key});
+class SobreApp extends StatelessWidget {
+  const SobreApp({super.key});
+  Future<void> _abrirLink() async {
+    final Uri url = Uri.parse('https://github.com/semellicodes');
 
-  Future<void> _fazerLigacao(String numero) async {
-    final Uri url = Uri.parse('tel:$numero');
     if (await canLaunchUrl(url)) {
-      await launchUrl(url);
+      await launchUrl(url, mode: LaunchMode.externalApplication);
     }
   }
 
@@ -24,7 +24,7 @@ class AjudaImediataScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10, top: 10),
+                padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
                 child: TextButton.icon(
                   onPressed: () {
                     Navigator.pop(context);
@@ -47,7 +47,7 @@ class AjudaImediataScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Ajuda Imediata',
+                          "Sobre o App",
                           style: TextStyle(
                             color: AppColors.ajuda,
                             fontSize: 25,
@@ -55,49 +55,44 @@ class AjudaImediataScreen extends StatelessWidget {
                           ),
                         ),
                         Divider(
-                          height: 15,
-                          thickness: 1,
                           color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
                         ),
-                        SizedBox(height: 30),
                         Text(
-                          'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
-                          style: TextStyle(color: Colors.black, fontSize: 16),
-                        ),
-                        Center(
-                          child: CustomMenuButton(
-                            title: 'LIGUE 190 (POLÍCIA MILITAR)',
-                            color: AppColors.alertaVermelho,
-                            onPressed: () {
-                              _fazerLigacao(AppData.policeNumber1);
-                            },
-                          ),
-                        ),
-                        Center(
-                          child: CustomMenuButton(
-                            title: 'LIGUE 197 (POLÍCIA CIVIL)',
-                            color: AppColors.alertaVermelho,
-                            onPressed: () {
-                              _fazerLigacao(AppData.policeNumber2);
-                            },
+                          "Nosso objetivo é oferecer um ambiente seguro e acessível, onde as vítimas possam encontrar apoio, conhecer seus direitos e acessar serviços de ajuda de forma rápida e eficiente.",
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 0, 0, 0),
+                            fontSize: 16,
                           ),
                         ),
                         Divider(
-                          height: 15,
-                          thickness: 1,
                           color: Colors.grey[300],
+                          thickness: 1,
+                          height: 20,
                         ),
-                        Text(
-                          'Para orientação, denúncia anônima e acolhimento:',
-                          style: TextStyle(color: Colors.black, fontSize: 16),
-                        ),
+                        ...AppData.sobreApp.entries.map((entry) {
+                          return ItemSobreapp(
+                            titulo: entry.key,
+                            descricao: entry.value,
+                          );
+                        }),
+
+                        SizedBox(height: 15),
+
                         Center(
-                          child: CustomMenuButton(
-                            title: 'LIGUE 180 (CENTRAL MULHER)',
-                            color: AppColors.ajuda,
-                            onPressed: () {
-                              _fazerLigacao(AppData.centralmulher);
+                          child: GestureDetector(
+                            onTap: () {
+                              _abrirLink();
                             },
+                            child: Text(
+                              "@semellicodes",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey[700],
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                       ],

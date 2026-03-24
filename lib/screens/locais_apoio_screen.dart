@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/theme/app_data.dart';
-import 'package:segura_app/widgets/item_apoio.dart';
+import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/widgets/card_local_apoio.dart';
 
 class ApoioScreen extends StatelessWidget {
   const ApoioScreen({super.key});

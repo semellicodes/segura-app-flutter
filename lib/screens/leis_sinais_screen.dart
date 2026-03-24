@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/theme/app_data.dart';
-import 'package:segura_app/widgets/item_leis.dart';
-import 'package:segura_app/widgets/item_topico.dart';
+import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/widgets/card_lei.dart';
+import 'package:segura_app/widgets/card_topico_ajuda.dart';
 
 class LeisScreen extends StatelessWidget {
   const LeisScreen({super.key});

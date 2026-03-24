@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:segura_app/screens/ajuda_screen.dart';
-import 'package:segura_app/screens/apoio_screen.dart';
-import 'package:segura_app/screens/leis_screen.dart';
-import 'package:segura_app/screens/map_screen.dart';
-import 'package:segura_app/screens/sobre_screen.dart';
+import 'package:segura_app/screens/ajuda_imediata_screen.dart';
+import 'package:segura_app/screens/locais_apoio_screen.dart';
+import 'package:segura_app/screens/leis_sinais_screen.dart';
+import 'package:segura_app/screens/mapa_seguranca_screen.dart';
+import 'package:segura_app/screens/sobre_app_screen.dart';
 
 class AppData {
   static const List<String> menuOptions = [

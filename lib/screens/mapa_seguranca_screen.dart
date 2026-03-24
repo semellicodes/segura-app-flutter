@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:segura_app/services/localizacao.dart';
+import 'package:segura_app/services/localizacao_service.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/widgets/botoes_zoom.dart';
+import 'package:segura_app/widgets/mapa_zoom_buttons.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -68,7 +68,11 @@ class _MapScreenState extends State<MapScreen> {
             ),
             children: [
               TileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                urlTemplate:
+                    'https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}',
+                additionalOptions: const {
+                  'accessToken': String.fromEnvironment('MAPBOX_ACCESS_TOKEN'),
+                },
                 userAgentPackageName: 'com.example.segura_app',
               ),
               if (_minhaPosicao != null)

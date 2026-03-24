@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/constants/app_data.dart';
 import 'package:segura_app/widgets/menu_principal_button.dart';
+import 'package:segura_app/widgets/botao_sos.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: const BotaoSosWidget(),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(

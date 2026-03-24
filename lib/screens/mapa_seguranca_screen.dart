@@ -18,7 +18,7 @@ class _MapScreenState extends State<MapScreen> {
   final LocationService _locationService = LocationService();
   final DelegaciasService _delegaciasService = DelegaciasService();
 
-  double _zoomAtual = 13.0; // Zoom retornado ao original para não ficar tão longe
+  double _zoomAtual = 13.0;
   LatLng? _minhaPosicao;
   bool _carregandoLocalizacao = true;
   List<Map<String, dynamic>> _delegacias = [];
@@ -34,12 +34,11 @@ class _MapScreenState extends State<MapScreen> {
 
     if (posicao != null) {
       if (mounted) setState(() => _minhaPosicao = posicao);
-      
+
       _mapController.move(posicao, _zoomAtual);
-      
-      // Radar invisível de delegacias ao redor (Overpass)
+
       final postos = await _delegaciasService.buscarDelegaciasProximas(posicao);
-      
+
       if (mounted) {
         setState(() {
           _delegacias = postos;
@@ -51,7 +50,9 @@ class _MapScreenState extends State<MapScreen> {
         setState(() => _carregandoLocalizacao = false);
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('⚠️ Ligue o botão de GPS (Localização) do seu celular para vermos o mapa e encontrar delegacias!'),
+            content: Text(
+              '⚠️ Ligue o botão de GPS (Localização) do seu celular para vermos o mapa e encontrar delegacias!',
+            ),
             backgroundColor: Colors.red,
             duration: Duration(seconds: 4),
           ),
@@ -74,13 +75,16 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-  // Define a paleta de cores para cada especialidade policial
   Color _getCorDelegacia(String tipo) {
     switch (tipo) {
-      case 'mulher': return Colors.purpleAccent;
-      case 'civil': return Colors.black87;
-      case 'militar': return Colors.blue[800]!;
-      default: return Colors.blueGrey; // Guarda e trânsito
+      case 'mulher':
+        return Colors.purpleAccent;
+      case 'civil':
+        return Colors.black87;
+      case 'militar':
+        return Colors.blue[800]!;
+      default:
+        return Colors.blueGrey;
     }
   }
 
@@ -111,28 +115,31 @@ class _MapScreenState extends State<MapScreen> {
             ),
             children: [
               TileLayer(
-                // O OpenStreetMap padrão é 100% Livre e não trava por excesso de usuários em planos gratuítos!
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 userAgentPackageName: 'com.example.segura_app',
               ),
               MarkerLayer(
                 markers: [
-                  // Marcador das Delegacias
-                  ..._delegacias.map((d) => Marker(
-                        point: d['posicao'] as LatLng,
-                        width: 30, // Diminuímos para proporção humana 
-                        height: 30,
-                        child: GestureDetector(
-                          onTap: () {
-                             ScaffoldMessenger.of(context).showSnackBar(
-                               SnackBar(content: Text(d['nome'].toString())),
-                             );
-                          },
-                          child: Icon(Icons.local_police, color: _getCorDelegacia(d['tipo']), size: 24), // Cor Dinâmica
+                  ..._delegacias.map(
+                    (d) => Marker(
+                      point: d['posicao'] as LatLng,
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text(d['nome'].toString())),
+                          );
+                        },
+                        child: Icon(
+                          Icons.local_police,
+                          color: _getCorDelegacia(d['tipo']),
+                          size: 24,
                         ),
-                      )),
+                      ),
+                    ),
+                  ),
 
-                  // O Seu marcador (GPS)
                   if (_minhaPosicao != null)
                     Marker(
                       point: _minhaPosicao!,
@@ -148,22 +155,30 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ],
           ),
-          
-          // Quadro Oculto da Legenda
+
           Positioned(
             bottom: 30,
             left: 10,
             child: Card(
-              color: Colors.white.withAlpha(235), // Transparencia suave comAlpha
+              color: Colors.white.withAlpha(235),
               elevation: 4,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Tipos de Base', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                    const Text(
+                      'Tipos de Base',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                    ),
                     const SizedBox(height: 5),
-                    _buildLegendItem(Colors.purpleAccent, 'Del. da Mulher (DEAM)'),
+                    _buildLegendItem(
+                      Colors.purpleAccent,
+                      'Del. da Mulher (DEAM)',
+                    ),
                     _buildLegendItem(Colors.black87, 'Polícia Civil'),
                     _buildLegendItem(Colors.blue[800]!, 'Polícia Militar'),
                     _buildLegendItem(Colors.blueGrey, 'Postos Comuns'),

@@ -3,6 +3,7 @@ import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/constants/app_data.dart';
 import 'package:segura_app/widgets/menu_principal_button.dart';
 import 'package:segura_app/widgets/botao_sos.dart';
+import 'package:segura_app/screens/camuflagem_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +12,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: const BotaoSosWidget(),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.videogame_asset, color: AppColors.background),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const CamuflagemScreen()),
+            );
+          },
+        ),
+      ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(

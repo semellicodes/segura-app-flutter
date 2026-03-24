@@ -51,7 +51,7 @@ class SOSService {
     if (posicao != null) {
       mapsLink = 'https://www.google.com/maps/search/?api=1&query=${posicao.latitude},${posicao.longitude}';
     } else {
-      mapsLink = 'A localização não pôde ser obtida pelo GPS. Tente me contatar rápido.';
+      mapsLink = '(Meu GPS está desligado ou sem sinal, não consigo mandar a localização, mas preciso de ajuda urgente. Me ligue!)';
     }
 
     // 2. Formatar mensagem e Link do WhatsApp

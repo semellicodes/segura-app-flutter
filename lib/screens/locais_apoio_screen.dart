@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/constants/support_locations_data.dart';
 import 'package:segura_app/widgets/card_local_apoio.dart';
 
 class ApoioScreen extends StatelessWidget {
@@ -53,7 +53,7 @@ class ApoioScreen extends StatelessWidget {
                           thickness: 1,
                           height: 20,
                         ),
-                        ...AppData.locaisDeApoio.entries.map((item) {
+                        ...SupportLocationsData.locaisDeApoio.entries.map((item) {
                           return ItemApoio(
                             titulo: item.key,
                             descricao: item.value,

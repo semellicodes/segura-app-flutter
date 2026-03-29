@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/constants/educational_data.dart';
 import 'package:segura_app/widgets/card_lei.dart';
 import 'package:segura_app/widgets/card_topico_ajuda.dart';
 
@@ -57,7 +57,7 @@ class LeisScreen extends StatelessWidget {
                         ),
                         Leis(
                           titulo: "Lei Maria da Penha (11.340/2006):",
-                          descricao: AppData
+                          descricao: EducationalData
                               .leis["Lei Maria da Penha (11.340/2006):"]!,
                         ),
                         Divider(
@@ -74,7 +74,7 @@ class LeisScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 15),
-                        ...AppData.tiposDeViolencia.entries.map((item) {
+                        ...EducationalData.tiposDeViolencia.entries.map((item) {
                           return Topico(
                             titulo: item.key,
                             descricao: item.value,
@@ -87,7 +87,7 @@ class LeisScreen extends StatelessWidget {
                         ),
                         Leis(
                           titulo: "Lei do Feminicídio (13.104/2015):",
-                          descricao: AppData
+                          descricao: EducationalData
                               .leis["Lei do Feminicídio (13.104/2015):"]!,
                         ),
                         Divider(
@@ -118,7 +118,7 @@ class LeisScreen extends StatelessWidget {
                         ),
 
                         SizedBox(height: 15),
-                        ...AppData.sinaisAlerta.entries.map((item) {
+                        ...EducationalData.sinaisAlerta.entries.map((item) {
                           return Topico(
                             titulo: item.key,
                             descricao: item.value,

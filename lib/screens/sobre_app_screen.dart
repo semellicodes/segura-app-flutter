@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/constants/app_info_data.dart';
 import 'package:segura_app/widgets/card_sobre_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -71,7 +71,7 @@ class SobreApp extends StatelessWidget {
                           thickness: 1,
                           height: 20,
                         ),
-                        ...AppData.sobreApp.entries.map((entry) {
+                        ...AppInfoData.sobreApp.entries.map((entry) {
                           return ItemSobreapp(
                             titulo: entry.key,
                             descricao: entry.value,

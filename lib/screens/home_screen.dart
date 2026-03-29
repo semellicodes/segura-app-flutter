@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/constants/app_info_data.dart';
+import 'package:segura_app/constants/navigation_data.dart';
 import 'package:segura_app/widgets/menu_principal_button.dart';
 import 'package:segura_app/widgets/botao_sos.dart';
 import 'package:segura_app/screens/camuflagem_screen.dart';
@@ -45,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                 const Icon(Icons.shield_moon_rounded, size: 48, color: AppColors.background),
                 const SizedBox(width: 12),
                 const Text(
-                  AppData.appName,
+                  AppInfoData.appName,
                   style: TextStyle(
                     color: AppColors.background,
                     fontSize: 42,
@@ -59,15 +60,12 @@ class HomeScreen extends StatelessWidget {
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
-                  children: AppData.menuItems.map(
+                  children: NavigationData.menuItems.map(
                     (item) => CustomMenuButton(
                       title: item.title,
                       icon: item.icon,
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => item.destination),
-                        );
+                        Navigator.pushNamed(context, item.routeName);
                       },
                     ),
                   ).toList(),

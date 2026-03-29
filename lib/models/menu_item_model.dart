@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class MenuItemModel {
   final String title;
   final IconData icon;
-  final Widget destination;
+  final String routeName;
 
   const MenuItemModel({
     required this.title,
     required this.icon,
-    required this.destination,
+    required this.routeName,
   });
 }

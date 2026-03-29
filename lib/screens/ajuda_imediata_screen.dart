@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
-import 'package:segura_app/constants/app_data.dart';
+import 'package:segura_app/constants/emergency_contacts_data.dart';
 import 'package:segura_app/widgets/menu_principal_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -70,7 +70,7 @@ class AjudaImediataScreen extends StatelessWidget {
                             backgroundColor: AppColors.alertaVermelho,
                             foregroundColor: Colors.white,
                             onPressed: () {
-                              _fazerLigacao(AppData.policeNumber1);
+                              _fazerLigacao(EmergencyContactsData.policeNumber1);
                             },
                           ),
                         ),
@@ -80,7 +80,7 @@ class AjudaImediataScreen extends StatelessWidget {
                             backgroundColor: AppColors.alertaVermelho,
                             foregroundColor: Colors.white,
                             onPressed: () {
-                              _fazerLigacao(AppData.policeNumber2);
+                              _fazerLigacao(EmergencyContactsData.policeNumber2);
                             },
                           ),
                         ),
@@ -99,7 +99,7 @@ class AjudaImediataScreen extends StatelessWidget {
                             backgroundColor: AppColors.ajuda,
                             foregroundColor: Colors.white,
                             onPressed: () {
-                              _fazerLigacao(AppData.centralmulher);
+                              _fazerLigacao(EmergencyContactsData.centralmulher);
                             },
                           ),
                         ),

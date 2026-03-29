@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:segura_app/models/menu_item_model.dart';
 import 'package:segura_app/screens/ajuda_imediata_screen.dart';
 import 'package:segura_app/screens/locais_apoio_screen.dart';
 import 'package:segura_app/screens/leis_sinais_screen.dart';
@@ -6,21 +7,35 @@ import 'package:segura_app/screens/mapa_seguranca_screen.dart';
 import 'package:segura_app/screens/sobre_app_screen.dart';
 
 class AppData {
-  static const List<String> menuOptions = [
-    "AJUDA IMEDIATA",
-    "MAPA DE SEGURANÇA",
-    "ONDE BUSCAR APOIO",
-    "LEIS E SINAIS",
-    "SOBRE O APP",
-  ];
   static const String appName = "SEGURA";
-  static Map<String, Widget> routes = {
-    "AJUDA IMEDIATA": const AjudaImediataScreen(),
-    "MAPA DE SEGURANÇA": const MapScreen(),
-    "ONDE BUSCAR APOIO": const ApoioScreen(),
-    "LEIS E SINAIS": const LeisScreen(),
-    "SOBRE O APP": const SobreApp(),
-  };
+
+  static const List<MenuItemModel> menuItems = [
+    MenuItemModel(
+      title: "AJUDA IMEDIATA",
+      icon: Icons.warning_rounded,
+      destination: AjudaImediataScreen(),
+    ),
+    MenuItemModel(
+      title: "MAPA DE SEGURANÇA",
+      icon: Icons.map_rounded,
+      destination: MapScreen(),
+    ),
+    MenuItemModel(
+      title: "ONDE BUSCAR APOIO",
+      icon: Icons.support_agent_rounded,
+      destination: ApoioScreen(),
+    ),
+    MenuItemModel(
+      title: "LEIS E SINAIS",
+      icon: Icons.gavel_rounded,
+      destination: LeisScreen(),
+    ),
+    MenuItemModel(
+      title: "SOBRE O APP",
+      icon: Icons.info_outline_rounded,
+      destination: SobreApp(),
+    ),
+  ];
   static const String centralmulher = "180";
   static const String policeNumber1 = "190";
   static const String policeNumber2 = "197";

@@ -8,23 +8,6 @@ import 'package:segura_app/screens/camuflagem_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  IconData _getIconForOption(String option) {
-    switch (option) {
-      case "AJUDA IMEDIATA":
-        return Icons.warning_rounded;
-      case "MAPA DE SEGURANÇA":
-        return Icons.map_rounded;
-      case "ONDE BUSCAR APOIO":
-        return Icons.support_agent_rounded;
-      case "LEIS E SINAIS":
-        return Icons.gavel_rounded;
-      case "SOBRE O APP":
-        return Icons.info_outline_rounded;
-      default:
-        return Icons.circle;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,19 +59,15 @@ class HomeScreen extends StatelessWidget {
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
-                  children: AppData.menuOptions.map(
-                    (option) => CustomMenuButton(
-                      title: option,
-                      icon: _getIconForOption(option),
+                  children: AppData.menuItems.map(
+                    (item) => CustomMenuButton(
+                      title: item.title,
+                      icon: item.icon,
                       onPressed: () {
-                        final destination = AppData.routes[option];
-
-                        if (destination != null) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => destination),
-                          );
-                        }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => item.destination),
+                        );
                       },
                     ),
                   ).toList(),

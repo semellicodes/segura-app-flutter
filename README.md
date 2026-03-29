@@ -6,7 +6,7 @@ Um aplicativo focado em oferecer um ambiente **seguro, discreto e acessível**, 
 
 ---
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 <p align="center">
   <img src="assets/tela_inicial.jpg?v=2" alt="Tela Inicial do Segura" width="19%">
@@ -18,23 +18,23 @@ Um aplicativo focado em oferecer um ambiente **seguro, discreto e acessível**, 
 
 ---
 
-## 💡 Nossos Diferenciais: Funcionalidades Conceituais
+## Diferenciais: Funcionalidades Conceituais
 
-### 1. 🚨 Botão SOS Inteligente (Pânico)
+### 1. Botão SOS Inteligente (Pânico)
 A segurança é prioritária. Um botão SOS flutuante acessível em todas as telas permite que a usuária dispare alertas de emergência rapidamente, facilitando o gatilho principal de socorro sob estresse extremo.
 
-### 2. 🎮 Rota de Fuga Silenciosa (Camuflagem)
+### 2. Rota de Fuga Silenciosa (Camuflagem)
 Em cenários de controle coercitivo (patrimonial/psicológico), o agressor frequentemente vasculha o telefone da vítima. Por isso, a aplicação possui uma **Tela de Camuflagem** inovadora: ao clicar no ícone de "Videogame" nativo no topo, o aplicativo se isola e se transforma instantaneamente num jogo da cobrinha (Snake Game) totalmente funcional. Isso oferece um álibi visual/psicológico perfeito para mascarar a finalidade real do app em momentos de alto risco.
 
-### 3. 📍 Mapa de Segurança Integrado (OpenStreetMap)
+### 3. Mapa de Segurança Integrado (OpenStreetMap)
 Localização em tempo real via satélite/GPS para exibir rotas para DEAMs (Delegacias da Mulher) e centros de apoio (CRAM) próximos à usuária. O carregamento de recursos do mapa ocorre sob demanda, respeitando estritamente a privacidade local.
 
-### 4. 📚 Cartilhas Offline e Suporte Imediato
+### 4. Cartilhas Offline e Suporte Imediato
 Disponibilizamos o discador *On-Click* (190, 197, 180) de forma inconfundível (com alto contraste anatômico nos botões vermelhos). Além disso, as cartilhas com leis de proteção (Lei Maria da Penha) e sintomas do ciclo da violência funcionam em formato **100% Offline**, provendo leitura segura em locais sem internet.
 
 ---
 
-## 🛠 Arquitetura e Tecnologia (Engenharia S.O.L.I.D)
+## Arquitetura e Tecnologia (Engenharia S.O.L.I.D)
 
 Visando altíssima manutenibilidade, o projeto escalou para a **Clean Architecture** (Arquitetura Limpa) implementando os princípios fundamentais da Engenharia de Software:
 - **Separação de Domínios (SRP):** Seguindo o princípio da _Single Responsibility_, abolimos "God Classes". Textos de apoio, itens de menu e telefones são entidades apartadas em namespaces de dados altamente focados (`lib/constants/*_data.dart`).

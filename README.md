@@ -8,14 +8,13 @@ Um aplicativo focado em oferecer um ambiente **seguro, discreto e acessível**, 
 
 ## 📸 Demonstração Visual
 
-<div align="center">
-  <img src="assets/tela_inicial.jpg" alt="Tela Inicial do Segura" height="400">
-  <img src="assets/tela_ajuda.jpg" alt="Tela de Ajuda Imediata" height="400">
-  <img src="assets/tela_mapa.jpg" alt="Mapa de Segurança Integrado" height="400">
-  <br><br>
-  <img src="assets/tela_sos.jpg" alt="Funcionalidade SOS" height="400">
-  <img src="assets/tela_snake.jpg" alt="Tela de Camuflagem (Snake)" height="400">
-</div>
+<p align="center">
+  <img src="assets/tela_inicial.jpg" alt="Tela Inicial do Segura" width="19%">
+  <img src="assets/tela_ajuda.jpg" alt="Tela de Ajuda Imediata" width="19%">
+  <img src="assets/tela_mapa.jpg" alt="Mapa de Segurança Integrado" width="19%">
+  <img src="assets/tela_sos.jpg" alt="Funcionalidade SOS" width="19%">
+  <img src="assets/tela_snake.jpg" alt="Tela de Camuflagem (Snake)" width="19%">
+</p>
 
 ---
 

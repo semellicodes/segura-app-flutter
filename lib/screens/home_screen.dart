@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/constants/app_info_data.dart';
+import 'package:segura_app/constants/app_images.dart';
 import 'package:segura_app/constants/navigation_data.dart';
 import 'package:segura_app/widgets/menu_principal_button.dart';
 import 'package:segura_app/widgets/botao_sos.dart';
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.shield_moon_rounded, size: 48, color: AppColors.background),
+                Image.asset(AppImages.logo, height: 80),
                 const SizedBox(width: 12),
                 const Text(
                   AppInfoData.appName,

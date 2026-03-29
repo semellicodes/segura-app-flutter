@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:segura_app/theme/app_colors.dart';
 import 'package:segura_app/constants/emergency_contacts_data.dart';
-import 'package:segura_app/widgets/menu_principal_button.dart';
+import 'package:segura_app/widgets/primary_action_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AjudaImediataScreen extends StatelessWidget {
@@ -42,11 +42,11 @@ class AjudaImediataScreen extends StatelessWidget {
                 child: Card(
                   elevation: 4,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Ajuda Imediata',
                           style: TextStyle(
                             color: AppColors.ajuda,
@@ -59,13 +59,14 @@ class AjudaImediataScreen extends StatelessWidget {
                           thickness: 1,
                           color: Colors.grey[300],
                         ),
-                        SizedBox(height: 30),
-                        Text(
+                        const SizedBox(height: 30),
+                        const Text(
                           'Se você está em perigo imediato, ligue para o número de emergência local ou procure um lugar seguro imediatamente.',
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
+                        const SizedBox(height: 16),
                         Center(
-                          child: CustomMenuButton(
+                          child: PrimaryActionCard(
                             title: 'LIGUE 190 (POLÍCIA MILITAR)',
                             backgroundColor: AppColors.alertaVermelho,
                             foregroundColor: Colors.white,
@@ -74,8 +75,9 @@ class AjudaImediataScreen extends StatelessWidget {
                             },
                           ),
                         ),
+                        const SizedBox(height: 16),
                         Center(
-                          child: CustomMenuButton(
+                          child: PrimaryActionCard(
                             title: 'LIGUE 197 (POLÍCIA CIVIL)',
                             backgroundColor: AppColors.alertaVermelho,
                             foregroundColor: Colors.white,
@@ -84,17 +86,20 @@ class AjudaImediataScreen extends StatelessWidget {
                             },
                           ),
                         ),
+                        const SizedBox(height: 16),
                         Divider(
                           height: 15,
                           thickness: 1,
                           color: Colors.grey[300],
                         ),
-                        Text(
+                        const SizedBox(height: 16),
+                        const Text(
                           'Para orientação, denúncia anônima e acolhimento:',
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
+                        const SizedBox(height: 16),
                         Center(
-                          child: CustomMenuButton(
+                          child: PrimaryActionCard(
                             title: 'LIGUE 180 (CENTRAL MULHER)',
                             backgroundColor: AppColors.ajuda,
                             foregroundColor: Colors.white,

@@ -39,7 +39,7 @@ class _BotaoSosWidgetState extends State<BotaoSosWidget> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text(
-              'Falha ao abrir WhatsApp. Verifique sua conexão ou se o app está instalado.',
+              'Falha ao abrir WhatsApp. Verifique sua conexão o; se o app está instalado.',
             ),
           ),
         );

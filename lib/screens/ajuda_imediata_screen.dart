@@ -67,7 +67,8 @@ class AjudaImediataScreen extends StatelessWidget {
                         Center(
                           child: CustomMenuButton(
                             title: 'LIGUE 190 (POLÍCIA MILITAR)',
-                            color: AppColors.alertaVermelho,
+                            backgroundColor: AppColors.alertaVermelho,
+                            foregroundColor: Colors.white,
                             onPressed: () {
                               _fazerLigacao(AppData.policeNumber1);
                             },
@@ -76,7 +77,8 @@ class AjudaImediataScreen extends StatelessWidget {
                         Center(
                           child: CustomMenuButton(
                             title: 'LIGUE 197 (POLÍCIA CIVIL)',
-                            color: AppColors.alertaVermelho,
+                            backgroundColor: AppColors.alertaVermelho,
+                            foregroundColor: Colors.white,
                             onPressed: () {
                               _fazerLigacao(AppData.policeNumber2);
                             },
@@ -94,7 +96,8 @@ class AjudaImediataScreen extends StatelessWidget {
                         Center(
                           child: CustomMenuButton(
                             title: 'LIGUE 180 (CENTRAL MULHER)',
-                            color: AppColors.ajuda,
+                            backgroundColor: AppColors.ajuda,
+                            foregroundColor: Colors.white,
                             onPressed: () {
                               _fazerLigacao(AppData.centralmulher);
                             },

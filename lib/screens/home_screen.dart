@@ -8,6 +8,23 @@ import 'package:segura_app/screens/camuflagem_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  IconData _getIconForOption(String option) {
+    switch (option) {
+      case "AJUDA IMEDIATA":
+        return Icons.warning_rounded;
+      case "MAPA DE SEGURANÇA":
+        return Icons.map_rounded;
+      case "ONDE BUSCAR APOIO":
+        return Icons.support_agent_rounded;
+      case "LEIS E SINAIS":
+        return Icons.gavel_rounded;
+      case "SOBRE O APP":
+        return Icons.info_outline_rounded;
+      default:
+        return Icons.circle;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,28 +55,44 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 60),
-            Text(
-              AppData.appName,
-              style: const TextStyle(
-                color: AppColors.background,
-                fontSize: 80,
-                fontWeight: FontWeight.bold,
-              ),
+            const SizedBox(height: 80),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.shield_moon_rounded, size: 48, color: AppColors.background),
+                const SizedBox(width: 12),
+                const Text(
+                  AppData.appName,
+                  style: TextStyle(
+                    color: AppColors.background,
+                    fontSize: 42,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            ...AppData.menuOptions.map(
-              (option) => CustomMenuButton(
-                title: option,
-                onPressed: () {
-                  final destination = AppData.routes[option];
+            const SizedBox(height: 40),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Column(
+                  children: AppData.menuOptions.map(
+                    (option) => CustomMenuButton(
+                      title: option,
+                      icon: _getIconForOption(option),
+                      onPressed: () {
+                        final destination = AppData.routes[option];
 
-                  if (destination != null) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => destination),
-                    );
-                  }
-                },
+                        if (destination != null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => destination),
+                          );
+                        }
+                      },
+                    ),
+                  ).toList(),
+                ),
               ),
             ),
           ],

@@ -49,7 +49,7 @@ class _PrimaryActionCardState extends State<PrimaryActionCard> {
         curve: Curves.easeOut,
         child: Container(
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
           decoration: BoxDecoration(
             color: widget.backgroundColor ?? Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -68,14 +68,16 @@ class _PrimaryActionCardState extends State<PrimaryActionCard> {
                 Icon(widget.icon, color: widget.foregroundColor ?? AppColors.primary, size: 28),
                 const SizedBox(width: 12),
               ],
-              Text(
-                widget.title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: widget.foregroundColor ?? AppColors.primary,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 0.5,
+              Flexible(
+                child: Text(
+                  widget.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: widget.foregroundColor ?? AppColors.primary,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.5,
+                  ),
                 ),
               ),
             ],
